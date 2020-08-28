@@ -7,12 +7,15 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
+using webApiDemoApp.Print;
 
 namespace DXApplication1
 {
     public partial class HdrDtl : DevExpress.XtraEditors.XtraForm
     {
         Dictionary<string, string> dic = new Dictionary<string, string>();
+        DataSet ds = new DataSet();
 
         string fileName = "";//xml存储地址
         bool closeflag = false;//关闭标志: true:需要关闭本窗体
@@ -131,6 +134,19 @@ namespace DXApplication1
                 #region 合计
                 #endregion
             }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            int index = gridView1.FocusedRowHandle;
+            if (index < 0)
+            {
+                MessageBox.Show("请选中需要操作的数据行！", "提示");
+                return;
+            }
+            string id = "";
+            id = gridView1.GetRowCellValue(index, gridView1.Columns["Id"]).ToString();
+            PrintForm printForm = new PrintForm("student", id, ds);
         }
     }
 }

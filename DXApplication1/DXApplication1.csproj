@@ -39,24 +39,31 @@
     <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v18.1" />
     <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.1.UI, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v18.1" />
     <Reference Include="DevExpress.Sparkline.v18.1.Core" />
     <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.1" />
     <Reference Include="DevExpress.Printing.v18.1.Core" />
     <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +84,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDA\StudentDA.cs" />
+    <Compile Include="DBFile\Connst.cs" />
+    <Compile Include="DBFile\DBConn.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +107,12 @@
       <DependentUpon>ImageReport.cs</DependentUpon>
     </Compile>
     <Compile Include="PrdConst.cs" />
+    <Compile Include="Print\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\PublicMethod.cs" />
@@ -114,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageReport.resx">
       <DependentUpon>ImageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -140,6 +159,94 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\PrintTemplate\student.xlsx" />
+    <None Include="Resources\PrintTemplate\丝线入库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\丝线库存导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\丝线领料出库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\云中马成品直接出库单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\云中马成品直接出库码单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\云中马成品退货检验单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\云中马染化料生产领料单打印模板.xls" />
+    <None Include="Resources\PrintTemplate\五金件标签打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\五金入库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\五金库存导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\五金领料出库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\加工结算单打印模板.xls" />
+    <None Include="Resources\PrintTemplate\印花花型库导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\坯布入库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\坯布库存导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\坯布领坯出库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\客供坯调拨单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\富瑞司成品出库打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\富瑞司财务结算单模板.xlsx" />
+    <None Include="Resources\PrintTemplate\富瑞司财务结算单直接打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\库位打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗PU订单排产表打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗成品可追溯记录打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗成品直接出库送货单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗染化料生产领料单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗生产安排单.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗色坯转出打印送货单.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗订单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗订单排产表打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\彩诗销售发货通知单.xlsx" />
+    <None Include="Resources\PrintTemplate\成品入库单码.xlsx" />
+    <None Include="Resources\PrintTemplate\成品直接出仓送货单.xlsx" />
+    <None Include="Resources\PrintTemplate\授权审批导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\收坯明细表.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成产品工艺单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成坯布入库条码打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成成品出库单.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成成品码单明细打印.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成成品码单明细打印1.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成成品码单明细打印2.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成成品退货单.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成染化料领料打印模板.xls" />
+    <None Include="Resources\PrintTemplate\新立成染化料领料打印模板1.xls" />
+    <None Include="Resources\PrintTemplate\新立成染色配方打印模板.xls" />
+    <None Include="Resources\PrintTemplate\新立成染色配方打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\新立成生产联系单.xlsx" />
+    <None Include="Resources\PrintTemplate\机台作业计划打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\杭州嘉濠印花染整有限公司生产指定书.xlsx" />
+    <None Include="Resources\PrintTemplate\染化料入库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\染化料库存导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\染化料领料出库单信息打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\染色色号库导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\染色配方打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\物料类别导入模板.xls" />
+    <None Include="Resources\PrintTemplate\生产单打印.xlsx" />
+    <None Include="Resources\PrintTemplate\生产投坯计划打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\生产管控功能菜单导入模板.xls" />
+    <None Include="Resources\PrintTemplate\经销结算单打印模板.xls" />
+    <None Include="Resources\PrintTemplate\英文版结算单打印模板.xls" />
+    <None Include="Resources\PrintTemplate\荣盛染色配方注册模板.xlsx" />
+    <None Include="Resources\PrintTemplate\莱美染化料生产领料单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\莱美染色生产计划单.xlsx" />
+    <None Include="Resources\PrintTemplate\表单自动编号导入模板.xlsx" />
+    <None Include="Resources\PrintTemplate\装箱单PackingList.xls" />
+    <None Include="Resources\PrintTemplate\达利不合格品通知单.xlsx" />
+    <None Include="Resources\PrintTemplate\达利回修信息反馈表模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利工作效率表.xlsx" />
+    <None Include="Resources\PrintTemplate\达利总装箱单打印模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利检验人员成检数量质量明细表模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利次品信息反馈表模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料总装箱单简箱导出模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料总装箱单简箱模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料总装箱单简箱模板excel.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料总装箱单简箱模板横联.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验信息表.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验信息表导出模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验数量统计总表导出模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验数量统计总表模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验责任部门统计总表导出模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验责任部门统计总表模板.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验质量统计总表.xlsx" />
+    <None Include="Resources\PrintTemplate\达利面料检验质量统计总表导出模板.xlsx" />
+    <None Include="Resources\PrintTemplate\配缸查询表（基于流程卡）.xlsx" />
+    <None Include="Resources\PrintTemplate\配缸查询表（基于生产单）.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\PrintTemplate\opcua.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

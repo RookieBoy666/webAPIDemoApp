@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SystemSet>
+  <startwhich>0</startwhich>
+  <ERPDBServerName>121.41.112.45</ERPDBServerName>
+  <ERPDBName>kaitong_MSCRM</ERPDBName>
+  <ERPDBUser>sa</ERPDBUser>
+  <ERPDBPassword>A9E26F85A97A49A601DC9624AC540870</ERPDBPassword>
+  <MachineID>PB01</MachineID>
+  <ShowMinBtn>1</ShowMinBtn>
+  <ShowTitle>杭州开源 爱普（Enterpoint）生产管控系统</ShowTitle>
+  <ShowEN>0</ShowEN>
+  <ProjectArea>凯通</ProjectArea>
+  <!--<CSWebApiBaseUrl>https://www.enterpointxrm.com/KYWarehouseWebApi_dev/api/</CSWebApiBaseUrl>-->
+  <CSWebApiBaseUrl>https://www.enterpointxrm.com/KYWarehouseWebApi_Release/api/</CSWebApiBaseUrl>
+  <Skin>VS2010</Skin>
+</SystemSet>

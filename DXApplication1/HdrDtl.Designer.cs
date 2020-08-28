@@ -40,6 +40,7 @@ namespace DXApplication1
             this.label2 = new System.Windows.Forms.Label();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.Print = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.sex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.name.Properties)).BeginInit();
@@ -141,11 +142,21 @@ namespace DXApplication1
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // Print
+            // 
+            this.Print.Location = new System.Drawing.Point(477, 163);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(75, 23);
+            this.Print.TabIndex = 12;
+            this.Print.Text = "打印";
+            this.Print.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // HdrDtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 552);
+            this.Controls.Add(this.Print);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.id);
             this.Controls.Add(this.name);
@@ -181,5 +192,6 @@ namespace DXApplication1
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraEditors.SimpleButton Print;
     }
 }
